@@ -1,0 +1,396 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-mustard: var(--mustard);
+  --color-burnt: var(--burnt);
+  --color-teal: var(--teal);
+  --color-navy: var(--navy);
+  --color-olive: var(--olive);
+  --color-pink: var(--pink);
+
+  --color-surface: var(--surface);
+  --color-surface-warm: var(--surface-warm);
+  --color-border: var(--border);
+
+  /* Semantic aliases */
+  --color-bg: var(--paper);
+  --color-bg-alt: var(--surface-warm);
+  --color-text: var(--ink);
+  --color-text-muted: var(--ink-muted);
+  --color-accent: var(--burnt);
+
+  --font-heading: var(--font-heading), "Outfit", system-ui, sans-serif;
+  --font-body: var(--font-body), "DM Sans", system-ui, sans-serif;
+  --font-mono: var(--font-mono), "Space Mono", monospace;
+  --font-sans: var(--font-body), "DM Sans", system-ui, sans-serif;
+
+  --shadow-hard-sm: 2px 2px 0 var(--ink);
+  --shadow-hard: 4px 4px 0 var(--ink);
+  --shadow-hard-md: 5px 5px 0 var(--ink);
+  --shadow-hard-lg: 6px 6px 0 var(--ink);
+  --shadow-hard-xl: 8px 8px 0 var(--ink);
+}
+
+:root,
+[data-theme="light"] {
+  /* Mid-Century Modern Warm Cream Palette */
+  --paper: #F6EFE0;
+  --ink: #2B2118;
+  --ink-muted: #5A4C40;
+  --mustard: #E3A62B;
+  --burnt: #D9622B;
+  --teal: #1F7A74;
+  --navy: #1E3A8A;
+  --olive: #7A8450;
+  --pink: #E8A598;
+
+  --surface: #FCFAF6;
+  --surface-warm: #EFE6D5;
+  --border: #2B2118;
+  --border-muted: rgba(43, 33, 24, 0.25);
+
+  --grain-opacity: 0.045;
+  --grain-blend: multiply;
+
+  --logo-fill: var(--ink);
+  --preloader-bg: #F6EFE0;
+  --preloader-accent: #E3A62B;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  /* Warm Walnut Mid-Century Dark Mode */
+  --paper: #1F1812;
+  --ink: #F6EFE0;
+  --ink-muted: #C4B5A3;
+
+  /* Brightened retro accents for rich contrast against walnut */
+  --mustard: #F0B238;
+  --burnt: #E5733E;
+  --teal: #2CA8A0;
+  --navy: #3B66D6;
+  --olive: #8C975E;
+  --pink: #F1B4AA;
+
+  --surface: #292119;
+  --surface-warm: #261E17;
+  --border: #EDE5D8;
+  --border-muted: rgba(246, 239, 224, 0.25);
+
+  --grain-opacity: 0.035;
+  --grain-blend: screen;
+
+  --logo-fill: var(--ink);
+  --preloader-bg: #1F1812;
+  --preloader-accent: #F0B238;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1F1812;
+    --ink: #F6EFE0;
+    --ink-muted: #C4B5A3;
+    --mustard: #F0B238;
+    --burnt: #E5733E;
+    --teal: #2CA8A0;
+    --navy: #3B66D6;
+    --olive: #8C975E;
+    --pink: #F1B4AA;
+    --surface: #292119;
+    --surface-warm: #261E17;
+    --border: #EDE5D8;
+    --border-muted: rgba(246, 239, 224, 0.25);
+    --grain-opacity: 0.035;
+    --grain-blend: screen;
+    --logo-fill: var(--ink);
+    --preloader-bg: #1F1812;
+    --preloader-accent: #F0B238;
+    color-scheme: dark;
+  }
+}
+
+/* ─── Base HTML & Body ─── */
+html {
+  scroll-padding-top: 5rem;
+  overflow-x: clip;
+  scrollbar-gutter: stable;
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), "DM Sans", system-ui, sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.65;
+}
+
+/* Subtle paper grain / halftone texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--grain-opacity, 0.045);
+  mix-blend-mode: var(--grain-blend, multiply);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  z-index: 999;
+}
+
+@layer base {
+  /* Poster Headings: Bold geometric sans, tight tracking */
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-family: var(--font-heading), "Outfit", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  p, li, span, a, button, input, textarea {
+    font-style: normal;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--burnt);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--mustard);
+  color: #2B2118;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Mid-Century Reusable Component Classes ─── */
+
+/* Retro Hard-Shadow Card */
+.retro-card {
+  border: 2.5px solid var(--ink);
+  background-color: var(--surface);
+  box-shadow: 5px 5px 0 var(--ink);
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.retro-card:hover {
+  transform: translate(-2px, -2px) rotate(-0.5deg);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+/* Retro Pill / Button with Hard Offset Shadow */
+.retro-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  font-family: var(--font-heading), "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 2px solid var(--ink);
+  border-radius: 9999px;
+  background-color: var(--burnt);
+  color: #F6EFE0;
+  box-shadow: 3.5px 3.5px 0 var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.retro-btn:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 5.5px 5.5px 0 var(--ink);
+}
+
+.retro-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.retro-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  font-family: var(--font-heading), "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 2px solid var(--ink);
+  border-radius: 9999px;
+  background-color: transparent;
+  color: var(--ink);
+  box-shadow: 3.5px 3.5px 0 var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.retro-btn-outline:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 5.5px 5.5px 0 var(--ink);
+  background-color: var(--mustard);
+  color: #2B2118;
+}
+
+/* Retro Section Eyebrow Label */
+.retro-label {
+  font-family: var(--font-mono), "Space Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Retro Tag / Pill */
+.retro-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 9999px;
+  font-family: var(--font-mono), "Space Mono", monospace;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--surface-warm);
+  color: var(--ink);
+}
+
+/* ─── Cut-Paper Image/Shape Masks ─── */
+.cut-paper-arch {
+  border-radius: 140px 140px 12px 12px;
+  border: 2.5px solid var(--ink);
+  overflow: hidden;
+}
+
+.cut-paper-blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  border: 2.5px solid var(--ink);
+  overflow: hidden;
+}
+
+/* ─── Calligraphy "Z" Monogram Animations (Mid-Century Recolored) ─── */
+@keyframes zPathDraw {
+  0% {
+    stroke-dashoffset: 1;
+    stroke-opacity: 1;
+    fill-opacity: 0;
+  }
+  65% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 0;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes zIdleDrift {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+}
+
+.z-midcentury-idle {
+  animation: zIdleDrift 8s ease-in-out infinite;
+}
+
+.z-midcentury-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  stroke-opacity: 0;
+  fill-opacity: 1;
+  animation: zPathDraw 1.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.z-midcentury-path-0 {
+  animation-delay: 0.2s;
+}
+
+.z-midcentury-path-1 {
+  animation-delay: 0.45s;
+}
+
+.z-midcentury-path-2 {
+  animation-delay: 0.7s;
+}
+
+/* Preloader animation classes */
+@keyframes preloaderContourDraw {
+  0% {
+    stroke-dashoffset: 1;
+    stroke-opacity: 1;
+    fill-opacity: 0;
+  }
+  75% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 0;
+    fill-opacity: 1;
+  }
+}
+
+.preloader-midcentury-path-0 {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  stroke-opacity: 0;
+  fill-opacity: 1;
+  animation: preloaderContourDraw 1.5s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.preloader-midcentury-path-1 {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  stroke-opacity: 0;
+  fill-opacity: 1;
+  animation: preloaderContourDraw 1.5s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+.preloader-midcentury-path-2 {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  stroke-opacity: 0;
+  fill-opacity: 1;
+  animation: preloaderContourDraw 1.5s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
+}
