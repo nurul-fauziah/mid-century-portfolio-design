@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const post = posts.find((p) => p.slug === slug);
 
   return {
-    title: post ? `${post.title} — Mid-Century Journal` : "Post Not Found",
+    title: post ? `${post.title} — Nurul Fauziah` : "Post Not Found",
     description: post?.excerpt,
   };
 }

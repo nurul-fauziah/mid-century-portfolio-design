@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const project = projects.find((p) => p.slug === slug);
 
   return {
-    title: project ? `${project.name} — Mid-Century Case Study` : "Project Not Found",
+    title: project ? `${project.name} — Nurul Fauziah` : "Project Not Found",
     description: project?.summary,
   };
 }
@@ -66,7 +66,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[color:var(--ink-muted)] hover:text-[color:var(--burnt)] transition-colors"
             >
               <ArrowLeft size={14} strokeWidth={2.5} className="transition-transform duration-200 group-hover:-translate-x-1" />
-              <span>Works / {project.name}</span>
+              <span>Projects / {project.name}</span>
             </Link>
           </div>
 
@@ -218,7 +218,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               className="retro-btn-outline"
             >
               <ArrowLeft size={15} strokeWidth={2.5} />
-              <span>Return to Works</span>
+              <span>Return to Projects</span>
             </Link>
 
             <div className="flex items-center gap-2">

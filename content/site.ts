@@ -34,16 +34,16 @@ export type Post = {
 };
 
 export const site = {
-  name: "Zia",
+  name: "Nurul Fauziah",
   initials: "Z",
-  tagline: "Product-minded developer",
-  title: "Full-Stack Developer",
+  tagline: "Building web applications and internal systems",
+  title: "Full Stack Developer",
   location: "Tangerang, Indonesia",
   intro:
-    "I design and build thoughtful digital products that balance clean UX, reliable systems, and product-minded execution.",
+    "I am a Full Stack Developer and Informatics Engineering graduate. I build web applications and internal tools with Next.js, Laravel, and NestJS, focusing on clear data models, practical workflows, and maintainable code.",
   available: {
     on: true,
-    label: "Open for opportunities and collaborations",
+    label: "Available for full-time roles & projects",
   },
   resume: "/resume.pdf",
   email: "nurulfauziahh204@gmail.com",
@@ -56,25 +56,26 @@ export const site = {
 
 export const about = {
   years: "1+ years",
-  lead: "I build digital experiences that feel premium, practical, and thoughtfully engineered.",
+  lead: "I like understanding how a feature will actually be used before deciding how to build it.",
   body: [
-    "I am a Fullstack Developer Intern at Trisya Media Teknologi (TMT) in Tangerang, where I work across platform architecture, frontend polish, and business-driven web solutions.",
-    "My work sits at the intersection of product thinking and engineering discipline: I like making systems easier to maintain, interfaces easier to trust, and workflows easier to use in real life.",
-    "From Laravel foundations to modern Next.js and NestJS workflows, I care about creating products that are not only functional, but also clear, scalable, and quietly refined in the details.",
+    "I am a fresh graduate in Informatics Engineering and a Full Stack Developer Intern at Trisya Media Teknologi (TMT) in Tangerang. My work focuses on building and maintaining web applications, internal tools, and database-driven systems.",
+    "I don't just think about whether a feature works on my local machine. I also care about how people use it in their daily workflow and whether the system is practical to maintain. When building internal tools, reducing three confusing steps to one clear flow saves real time across a team.",
+    "My day-to-day stack centers around Next.js, TypeScript, Laravel, and NestJS, working with PostgreSQL and MySQL. I enjoy working on the structural parts of applications: role-based access control (RBAC), relational database schemas, form validations, and clean API contracts.",
   ],
   interests: [
-    "Internal systems & ERP",
-    "Interface design",
+    "Internal tools & ERP workflows",
+    "Database design & API contracts",
     "Japanese language & continuous learning",
   ],
-  education: "Focused on software engineering, product thinking, and practical problem solving in modern web applications.",
+  education:
+    "Bachelor's Degree in Informatics Engineering. Hands-on background in relational database design, object-oriented programming, and web systems development.",
   timeline: [
     { y: "2024", t: "Junior Laravel Developer" },
-    { y: "2025", t: "Fullstack Developer Intern, TMT" },
+    { y: "2025", t: "Full Stack Developer Intern, TMT" },
   ],
 };
 
-// Flat list preserved for backward compat (used in About section chips)
+// Flat list of technologies
 export const skills: string[] = [
   "JavaScript",
   "TypeScript",
@@ -94,64 +95,65 @@ export const skills: string[] = [
   "Kotlin",
   "Git",
   "pnpm",
+  "Docker",
   "Jira",
   "Sanity CMS",
   "MinIO",
 ];
 
-// Categorized skills for the sketch-board layout
+// Categorized skills
 export const skillCategories: { label: string; annotation: string; items: string[] }[] = [
   {
     label: "Languages",
-    annotation: "core toolkit",
+    annotation: "core syntax",
     items: ["JavaScript", "TypeScript", "PHP", "Python", "Kotlin"],
   },
   {
-    label: "Frameworks",
-    annotation: "build with these →",
-    items: ["Next.js", "React", "Laravel", "NestJS", "Flutter", "Filament"],
+    label: "Frameworks & Backend",
+    annotation: "application layer",
+    items: ["Next.js", "React", "Laravel", "NestJS", "Filament", "Flutter"],
   },
   {
-    label: "Styling & UI",
+    label: "UI & Styling",
     annotation: "interface layer",
     items: ["Tailwind CSS", "shadcn/ui"],
   },
   {
-    label: "Databases",
-    annotation: "data stores",
-    items: ["MySQL", "PostgreSQL", "Prisma"],
+    label: "Databases & Storage",
+    annotation: "persistence",
+    items: ["PostgreSQL", "MySQL", "Prisma", "MinIO"],
   },
   {
-    label: "Tools & Infra",
-    annotation: "dev workflow",
-    items: ["Git", "pnpm", "Jira", "Sanity CMS", "MinIO"],
+    label: "DevOps & Workflow",
+    annotation: "tooling & delivery",
+    items: ["Git", "Docker", "pnpm", "Jira", "Sanity CMS"],
   },
 ];
 
 export const experience = [
   {
-    role: "Fullstack Developer Intern",
+    role: "Full Stack Developer Intern",
     org: "Trisya Media Teknologi (TMT)",
     dates: "2025 – Present",
     resp: [
-      "Building Universal Portal Engine (UPE), a monorepo-based internal platform for operational workflows and unified access across business tools.",
-      "Developing the Lokananta Bloc company profile site with a polished user experience and a content model that stays flexible for future updates.",
-      "Refactoring a Laravel/Filament finance dashboard to improve maintainability, clarity, and frontend consistency across business-critical interfaces.",
+      "Developing Universal Portal Engine (UPE), an internal platform providing role-based access control (RBAC), user and role management, document management, and shared configuration dashboards.",
+      "Building the Lokananta Bloc profile website with Next.js and Sanity CMS, creating structured content schemas so non-technical staff can update schedules and events independently.",
+      "Refactoring a Laravel/Filament finance dashboard into dedicated service classes, improving role-based widget access and query caching.",
     ],
-    tech: ["Next.js", "NestJS", "Laravel", "Filament", "Prisma"],
-    note: "I focus on translating product goals into structured, scalable interfaces and clean implementation practices that remain easy to evolve.",
+    tech: ["Next.js", "NestJS", "Laravel", "Filament", "PostgreSQL", "Prisma", "Docker"],
+    note: "Working on internal tools taught me that clean database models and predictable component boundaries matter far more than clever, over-engineered code.",
   },
   {
     role: "Junior Laravel Developer",
     org: "TMT / Laravel Projects",
     dates: "2024 – 2025",
     resp: [
-      "Built and refined CRUD-heavy web applications using Laravel and MySQL for evolving business requirements.",
-      "Worked closely with backend logic, validation flow, and interface consistency to support smoother product operations.",
-      "Developed a stronger understanding of production-minded work: balancing code quality, business needs, and maintainable system design.",
+      "Built database migrations, Eloquent models, and form request validations for CRUD-heavy business web applications.",
+      "Developed an invoice and operational workflow management system using Laravel and MySQL, replacing manual spreadsheet tracking.",
+      "Handled API endpoints, relational data queries, and role-based permissions across multiple administrative interfaces.",
     ],
-    tech: ["PHP", "Laravel", "MySQL"],
-    note: "This period shaped my backend foundation and deepened my appreciation for thoughtful, user-centered systems design.",
+    tech: ["PHP", "Laravel", "MySQL", "Blade", "REST APIs"],
+    note: "Building backends from scratch showed me how quickly unvalidated inputs or sloppy schemas turn into bugs. It made me much more disciplined about database design and request handling.",
   },
 ];
 
@@ -159,42 +161,44 @@ export const projects: Project[] = [
   {
     slug: "universal-portal-engine",
     name: "Universal Portal Engine",
-    category: "Internal platform",
-    role: "Fullstack (intern)",
+    category: "Internal Platform",
+    role: "Full Stack (Intern)",
     accent: "#3b9cff",
-    summary: "A pnpm monorepo powering TMT's internal portal platform and operational workflows.",
+    summary:
+      "An internal platform providing role-based access control (RBAC), user and role management, document management, and shared dashboard configuration.",
     overview:
-      "Universal Portal Engine is an internal platform designed to unify operational interfaces, navigation, and app structure across a growing monorepo environment.",
+      "Universal Portal Engine is an internal platform built to give internal teams a single, structured workspace. Instead of rebuilding navigation, auth guards, and layout logic for each internal tool, this system provides a standardized application shell.",
     problem:
-      "The team needed a scalable internal foundation that could support multiple routes, shared UI patterns, and a predictable developer experience without repetitive setup.",
+      "Internal teams were working on separate tools with inconsistent layout code, duplicated authentication checks, and fragmented user administration. Developers had to re-implement boilerplate for every new route, slowing down delivery.",
     objectives: [
-      "Create a reusable application shell for internal pages and modules",
-      "Standardize layout patterns across routes and feature areas",
-      "Support faster iteration for platform teams working in a monorepo",
+      "Build a reusable application shell with navigation, top bar, and role-based access control (RBAC)",
+      "Implement user management, role assignment, and document management modules",
+      "Set up idempotent Prisma seed scripts to make local development onboarding fast and repeatable",
     ],
     contributions: [
-      "Built the AppShell, Sidebar, and Topbar layout for the internal portal",
-      "Created placeholder screens for 11 routes to help the product move faster",
-      "Wrote an idempotent Prisma seed script to streamline local setup",
-      "Set up reusable shadcn/ui components for consistency across the platform",
+      "Built the responsive application shell layout, sidebar navigation, and user header in Next.js",
+      "Created structured screens for 11 internal routes, covering user administration, role assignment, and document tracking",
+      "Wrote idempotent Prisma database seed scripts for local development and testing environments",
+      "Implemented reusable UI components with shadcn/ui and Tailwind CSS to maintain consistency across modules",
     ],
-    frontend: "Next.js 15, React 19, shadcn/ui, and a modular design system.",
-    backend: "NestJS with PostgreSQL via Prisma and MinIO for object storage.",
-    stack: ["Next.js", "React", "NestJS", "PostgreSQL", "Prisma", "MinIO", "pnpm"],
+    frontend: "Next.js 15, React 19, TypeScript, Tailwind CSS, shadcn/ui.",
+    backend: "NestJS with PostgreSQL via Prisma ORM, Docker, MinIO for file storage.",
+    stack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "TypeScript", "Docker", "MinIO"],
     features: [
-      "Reusable shell layout and navigation system",
-      "Monorepo-ready developer structure",
-      "Prisma-powered local data setup",
-      "Consistent component library and internal app design",
+      "Role-based access control (RBAC) with granular permissions",
+      "User and role management interfaces",
+      "Document upload and management workflows",
+      "Idempotent database seeding for repeatable local setups",
+      "Modular shell layout shared across internal modules",
     ],
     challenges: [
       {
-        c: "Prisma client issues and TypeScript version mismatches",
-        s: "Resolved through monorepo-aware dependency management and consistent environment setup.",
+        c: "Ensuring smooth local setup across team members",
+        s: "Wrote idempotent Prisma seed scripts and Docker configuration so teammates could spin up the full database, auth seed, and file storage in minutes without manual SQL steps.",
       },
       {
-        c: "Choosing the right storage approach",
-        s: "Evaluated options and recommended MinIO for its S3-compatible API and local-first practicality.",
+        c: "Organizing permissions for multiple internal roles",
+        s: "Structured permission checks into middleware and backend guards so role boundaries are enforced at the API level rather than relying solely on UI hiding.",
       },
     ],
     sample: true,
@@ -202,81 +206,87 @@ export const projects: Project[] = [
   {
     slug: "lokananta-bloc",
     name: "Lokananta Bloc Profile",
-    category: "Company profile",
-    role: "Frontend",
+    category: "Company Profile",
+    role: "Frontend Developer",
     accent: "#2ec4b6",
-    summary: "A profile website for a cultural destination brand in Solo, Indonesia, with a refined visual identity.",
+    summary:
+      "A profile website for a historic music and cultural destination in Solo, Indonesia, featuring structured content management through Sanity CMS.",
     overview:
-      "This project focused on turning a brand story into a modern, approachable website that matched the design direction while keeping content flexible enough for future updates.",
+      "Lokananta Bloc is a cultural landmark and creative hub in Solo. This website serves as their public profile, showcasing visiting information, historical archives, tenant directories, and upcoming events.",
     problem:
-      "The client needed a web experience that felt premium and consistent with the brand, without sacrificing ease of content management.",
+      "The client needed a website where non-technical editorial staff could independently publish event schedules, tenant directories, and stories without requesting code updates from developers.",
     objectives: [
-      "Match the Figma design closely with a polished visual feel",
-      "Structure editorial content for easy maintenance through Sanity CMS",
-      "Deliver a responsive experience across desktop and mobile screens",
+      "Match the provided Figma design closely with clean, responsive pages",
+      "Structure editorial content schemas in Sanity CMS for flexible updates",
+      "Deliver fast page loads using Next.js static rendering",
     ],
     contributions: [
-      "Implemented GROQ queries and Sanity content field spreads for structured content delivery",
-      "Matched the visual design closely to maintain a premium look and feel",
-      "Applied two-tone highlight styling to elevate the brand presentation",
+      "Created Sanity Studio schema types for events, destination highlights, and tenant listings",
+      "Wrote GROQ queries to fetch structured content into Next.js pages",
+      "Implemented responsive page layouts from mobile to desktop following provided design mockups",
+      "Built accessible content sections with clean semantic markup",
     ],
-    frontend: "Next.js with static rendering and a design-driven UI layer.",
-    backend: "Sanity CMS for structured content and flexible editorial updates.",
-    stack: ["Next.js", "Sanity", "GROQ"],
+    frontend: "Next.js, TypeScript, Tailwind CSS.",
+    backend: "Sanity CMS for structured content management, queried via GROQ.",
+    stack: ["Next.js", "TypeScript", "Sanity CMS", "GROQ", "Tailwind CSS"],
     features: [
-      "CMS-driven content organization",
-      "Responsive brand-first presentation",
-      "Custom design details aligned to provided mockups",
+      "CMS-backed content management for events, stories, and directories",
+      "GROQ queries optimized for structured content retrieval",
+      "Responsive layout for mobile, tablet, and desktop viewports",
+      "Clean content model allowing non-technical updates without code changes",
     ],
     challenges: [
       {
-        c: "Design fidelity and content consistency",
-        s: "I translated the provided UI into a precise and maintainable implementation without losing flexibility.",
+        c: "Designing a schema that non-technical editors could manage easily",
+        s: "Structured content fields with clear helper labels, validation rules, and sensible defaults in Sanity Studio, preventing broken layouts when optional fields are empty.",
       },
       {
-        c: "Balancing aesthetics with content structure",
-        s: "Used a clean content model so future edits remain simple for non-technical users.",
+        c: "Translating detailed Figma mockups accurately into code",
+        s: "Built reusable layout components with Tailwind CSS that preserved spacing and typographic rhythm across different screen resolutions.",
       },
     ],
     sample: true,
   },
   {
     slug: "finance-dashboard",
-    name: "Finance Dashboard",
-    category: "Dashboard",
-    role: "Frontend",
+    name: "Finance Dashboard Refactor",
+    category: "Internal Tool / Dashboard",
+    role: "Full Stack Developer",
     accent: "#7c8cff",
-    summary: "A dashboard for a finance workflow built with Laravel and Filament, focused on usability and role-based visibility.",
+    summary:
+      "A dashboard refactor for an operational finance workflow built with Laravel and Filament, improving role-based widget visibility and query structure.",
     overview:
-      "This project involved improving and restructuring a dashboard that needed to support financial operations in a clear, maintainable way.",
+      "This project focused on restructuring a financial operational dashboard built on Laravel and Filament. The system handles daily transaction summaries, approval queues, and financial records.",
     problem:
-      "The existing system needed a more organized architecture and improved product logic so that widgets, access rules, and performance could scale without confusion.",
+      "The original dashboard had heavy database queries embedded directly inside presentation widgets, causing slow page loads. Access control rules were also inconsistent across different staff roles.",
     objectives: [
-      "Refactor the dashboard architecture around a clearer service model",
-      "Improve access control and widget visibility by role",
-      "Make the dashboard easier to maintain and extend over time",
+      "Separate business logic and data aggregation into a dedicated service layer",
+      "Enforce role-based visibility so staff only see widgets relevant to their permissions",
+      "Implement query caching to reduce redundant database queries on repeated views",
     ],
     contributions: [
-      "Refactored the dashboard around a FinanceDashboardService pattern for better structure",
-      "Improved caching behavior to reduce unnecessary loads and improve responsiveness",
-      "Applied role-based visibility that matched business requirements more closely",
+      "Extracted complex query logic into a dedicated FinanceDashboardService class",
+      "Configured Filament widget visibility rules scoped strictly by user role",
+      "Added targeted caching for summary statistics to eliminate redundant query executions",
+      "Cleaned up table schemas and filter controls for daily financial records",
     ],
-    frontend: "Filament widgets and a cleaner dashboard interface.",
-    backend: "Laravel-driven business logic and data access.",
-    stack: ["Laravel", "Filament", "PHP", "MySQL"],
+    frontend: "Filament Admin panels, Blade components, Tailwind CSS.",
+    backend: "Laravel, PHP, MySQL.",
+    stack: ["Laravel", "Filament", "PHP", "MySQL", "Tailwind CSS"],
     features: [
-      "Service-oriented dashboard structure",
-      "Role-aware widget visibility",
-      "Improved performance through caching",
+      "Service-oriented dashboard logic separated from presentation widgets",
+      "Role-aware widget visibility for accountants, managers, and administrators",
+      "Summary statistic caching to speed up dashboard reloads",
+      "Filterable transaction tables with date range and status filters",
     ],
     challenges: [
       {
-        c: "Balancing business rules with UI simplicity",
-        s: "I focused on making the dashboard clearer for users while keeping the data model and business logic maintainable.",
+        c: "Refactoring without breaking existing operational views",
+        s: "Tested each service method independently and matched output formats before replacing the legacy widget queries, ensuring zero disruption to existing reporting.",
       },
       {
-        c: "Keeping the platform extensible",
-        s: "The refactor was designed to support future widgets and role scopes without a major rewrite.",
+        c: "Preventing stale data when transactions are added",
+        s: "Implemented cache tag invalidation whenever new transaction records are created or approved, ensuring the summary cards remain accurate.",
       },
     ],
     sample: true,
@@ -286,19 +296,36 @@ export const projects: Project[] = [
 export const posts: Post[] = [
   {
     slug: "building-product-thinking-in-real-projects",
-    title: "Building product thinking in real projects",
+    title: "Thinking beyond \"does it work?\" in internal tools",
     excerpt:
-      "A short reflection on how engineering decisions become clearer when product context, user needs, and code quality are treated as one system.",
+      "Reflections from building internal platforms: why database schemas matter more than fancy UI, and why understanding how people actually work prevents costly rewrites.",
     date: "2026-01-10",
     category: "Web Development",
     minutes: 4,
     sample: true,
     body: [
-      { t: "h", v: "From code to product" },
-      { t: "p", v: "The most useful projects are not only the ones that work technically—they are the ones that solve the right problem in a way users can actually understand and trust." },
-      { t: "p", v: "In internal work and client-facing systems, I have found that good engineering is shaped by product clarity, maintainability, and a strong sense of user flow." },
-      { t: "li", v: ["Understand the problem before writing code", "Build for future change, not only for the current request", "Design interfaces that help users move with confidence"] },
-      { t: "code", v: "const productFocus = 'clear UX + reliable systems';" },
+      { t: "h", v: "Understanding the workflow before writing the code" },
+      {
+        t: "p",
+        v: "When building internal tools—like an RBAC portal or a finance dashboard—it is tempting to jump straight into creating UI components. But the real friction in daily operations rarely comes from missing visual flair. It comes from misaligned workflows: a form asking for information the operator doesn't have yet, or a database schema that cannot handle a normal business exception.",
+      },
+      { t: "h", v: "Keep the database model honest" },
+      {
+        t: "p",
+        v: "I've learned that a clean relational schema and clear API contracts save more time than any frontend shortcut. When relationships between users, roles, and records are modeled cleanly in PostgreSQL or MySQL, the frontend code becomes simpler, validation is straightforward, and the system is much less prone to edge-case bugs.",
+      },
+      {
+        t: "li",
+        v: [
+          "Talk through the actual operator workflow before writing migrations",
+          "Validate data strictly at the boundary (forms and API endpoints)",
+          "Build components that are clear to read and maintain six months from now",
+        ],
+      },
+      {
+        t: "code",
+        v: "// Good software solves the actual workflow, not an imagined one\nconst isReady = requirements.understood && dataModel.sound;",
+      },
     ],
   },
 ];

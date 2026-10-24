@@ -63,7 +63,7 @@ export function Profile() {
               02 — ABOUT
             </span>
             <span className="font-heading text-sm font-bold uppercase tracking-wider text-[color:var(--ink-muted)]">
-              The Craft & Background
+              Background & Technical Approach
             </span>
           </div>
 
@@ -102,14 +102,14 @@ export function Profile() {
                     Nurul Fauziah
                   </h3>
                   <p className="font-mono text-xs text-[color:var(--burnt)] font-bold uppercase mt-0.5">
-                    Full-Stack Engineer
+                    Full Stack Developer
                   </p>
                 </div>
 
                 {/* Bottom decorative bar */}
                 <div className="w-full pt-3 border-t-2 border-[color:var(--ink)] flex justify-between text-[0.65rem] font-mono font-bold text-[color:var(--ink-muted)]">
                   <span>1+ YRS EXP</span>
-                  <span>PRODUCT MINDED</span>
+                  <span>INFORMATICS GRADUATE</span>
                 </div>
               </div>
             </div>
@@ -127,16 +127,16 @@ export function Profile() {
 
               <div className="p-4 border-2 border-[color:var(--ink)] bg-[color:var(--surface)] rounded-xl shadow-[3px_3px_0_var(--ink)]">
                 <span className="font-mono text-[0.65rem] uppercase font-bold text-[color:var(--ink-muted)] block">
-                  Selected Works
+                  Selected Projects
                 </span>
                 <span className="font-heading text-2xl font-black text-[color:var(--teal)]">
-                  0{projects.length} Works
+                  0{projects.length} Projects
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Right Column (Cols 6-12): Bio & Engineering Philosophy */}
+          {/* Right Column (Cols 6-12): Bio & Technical Approach */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             {/* Bold Headline */}
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-[color:var(--ink)] leading-[1.08] mb-6">
@@ -154,7 +154,7 @@ export function Profile() {
             <div className="mt-8 p-5 border-2 border-[color:var(--ink)] bg-[color:var(--surface)] rounded-xl shadow-[3.5px_3.5px_0_var(--ink)] space-y-3">
               <div>
                 <span className="font-mono text-xs font-bold uppercase tracking-wider text-[color:var(--burnt)]">
-                  Education & Philosophy:
+                  Education & Foundations:
                 </span>
                 <p className="font-body text-sm text-[color:var(--ink)] mt-1">
                   {about.education}
@@ -174,7 +174,7 @@ export function Profile() {
             {/* Core Stack Pills */}
             <div className="mt-8">
               <span className="font-mono text-xs uppercase tracking-wider text-[color:var(--ink-muted)] font-bold block mb-3">
-                Core Toolkit
+                Core Technologies
               </span>
               <div className="flex flex-wrap gap-2">
                 {skills.slice(0, 10).map((tech) => (
@@ -213,16 +213,16 @@ export function Works() {
                 03 — PROJECTS
               </span>
               <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-                0{projects.length} CASE STUDIES
+                0{projects.length} PROJECTS
               </span>
             </div>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[color:var(--ink)] leading-[0.95]">
-              Selected Works
+              Selected Projects
             </h2>
           </div>
 
           <p className="max-w-[42ch] font-body text-sm sm:text-base text-[color:var(--ink-muted)]">
-            Record sleeves of engineering systems, internal tools, and client platforms built with production rigor.
+            Web applications and internal systems I have built, covering role-based platforms, content management, and dashboard refactoring.
           </p>
         </div>
 
@@ -278,7 +278,7 @@ export function Works() {
 
                     {/* Badge on sleeve */}
                     <span className="relative z-10 font-mono text-[0.65rem] font-bold uppercase tracking-wider bg-[color:var(--paper)] text-[color:var(--ink)] px-2.5 py-1 rounded border border-[color:var(--ink)] shadow-[2px_2px_0_var(--ink)]">
-                      SLEEVE 0{idx + 1} · {project.role}
+                      PROJECT 0{idx + 1} · {project.role}
                     </span>
                   </div>
 
@@ -328,7 +328,7 @@ export function Works() {
                     href={`/projects/${project.slug}`}
                     className="inline-flex items-center gap-1.5 font-heading text-xs font-bold uppercase tracking-wider text-[color:var(--ink)] group-hover:text-[color:var(--burnt)] transition-colors"
                   >
-                    <span>Read Case Study</span>
+                    <span>View Project Details</span>
                     <ArrowUpRight size={15} strokeWidth={2.5} />
                   </Link>
 
@@ -411,16 +411,16 @@ export function Stack() {
                 04 — SKILLS
               </span>
               <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-                COMPLETE TECH INVENTORY
+                TECHNICAL TOOLKIT
               </span>
             </div>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[color:var(--ink)] leading-[0.95]">
-              Technologies & Tools
+              Technologies &amp; Tools
             </h2>
           </div>
 
           <p className="max-w-[44ch] font-body text-sm sm:text-base text-[color:var(--ink-muted)]">
-            A unified inventory of languages, frameworks, and datastores. Every skill housed in a mid-century geometric tile.
+            Languages, frameworks, databases, and development tools I use when building web applications.
           </p>
         </div>
 
@@ -501,7 +501,7 @@ export function History() {
                 05 — EXPERIENCE
               </span>
               <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-                CHRONOLOGY & IMPACT
+                WORK HISTORY
               </span>
             </div>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[color:var(--ink)] leading-[0.95]">
@@ -510,7 +510,7 @@ export function History() {
           </div>
 
           <p className="max-w-[42ch] font-body text-sm sm:text-base text-[color:var(--ink-muted)]">
-            A track record of engineering solutions, architectural scaling, and user-centered platform delivery.
+            My experience developing internal tools, database models, and web features in production environments.
           </p>
         </div>
 
@@ -613,16 +613,16 @@ export function Writing() {
                 06 — JOURNAL
               </span>
               <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-                PERSPECTIVES & ESSAYS
+                NOTES &amp; REFLECTIONS
               </span>
             </div>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[color:var(--ink)] leading-[0.95]">
-              Articles & Notes
+              Articles &amp; Notes
             </h2>
           </div>
 
           <p className="max-w-[42ch] font-body text-sm sm:text-base text-[color:var(--ink-muted)]">
-            Editorial essays on architecture, system boundaries, and user interface craftsmanship.
+            Short notes on software development, database design, and building usable tools.
           </p>
         </div>
 
@@ -757,11 +757,11 @@ export function Contact() {
                 </div>
 
                 <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.95] text-[#F6EFE0]">
-                  Let&apos;s make something timeless.
+                  Let&apos;s talk about building software.
                 </h2>
 
                 <p className="mt-5 font-body text-base sm:text-lg text-[#F6EFE0]/90 max-w-lg leading-relaxed">
-                  Have an ambitious project, an engineering opening, or an idea to discuss? Drop a message or reach out directly.
+                  I am open to Full Stack Developer opportunities, engineering roles, and collaborative projects. Feel free to reach out directly by email or form.
                 </p>
               </div>
 
@@ -950,19 +950,19 @@ export function Footer() {
           </div>
           <div>
             <span className="font-heading text-lg font-black uppercase tracking-tight text-[color:var(--ink)]">
-              Zia · {site.name}
+              {site.name}
             </span>
             <p className="font-mono text-[0.68rem] text-[color:var(--ink-muted)]">
-              © {new Date().getFullYear()} · Mid-Century Modern Edition
+              © {new Date().getFullYear()} · Full Stack Developer · Tangerang, Indonesia
             </p>
           </div>
         </div>
 
         {/* Center Vintage Badge */}
         <div className="hidden md:flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-widest text-[color:var(--ink-muted)]">
-          <span>ATOMIC ERA</span>
+          <span>FULL STACK DEVELOPER</span>
           <span className="text-[color:var(--burnt)]">✦</span>
-          <span>EAMES &amp; BAUHAUS SPIRIT</span>
+          <span>NEXT.JS · LARAVEL · NESTJS</span>
         </div>
 
         {/* Right: Back to Top Pill Button */}

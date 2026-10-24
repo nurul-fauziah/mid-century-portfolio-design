@@ -133,11 +133,11 @@ export default function Intro() {
 
             {/* Poster title */}
             <h2 className="font-heading text-xl font-extrabold uppercase tracking-tight text-[#2B2118] mt-2">
-              Zia. Studio
+              Nurul Fauziah
             </h2>
 
             <p className="font-body text-xs text-[#2B2118]/80 font-medium tracking-wide mt-1">
-              Full-Stack Engineering & Design
+              Full Stack Developer
             </p>
           </div>
         </motion.div>

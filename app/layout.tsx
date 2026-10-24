@@ -6,30 +6,46 @@ import MotionRoot from "@/components/MotionRoot";
 import { site } from "@/content/site";
 import { fontHeading, fontBody, fontMono } from "./fonts";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || site.url || "http://localhost:3000";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: `${site.name} — ${site.title}`,
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${site.name} — ${site.title}`,
+    template: `%s — ${site.name}`,
+  },
   description: site.intro,
   applicationName: site.name,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
-    "Full-Stack Developer",
+    "Full Stack Developer",
     "Next.js Developer",
     "Laravel Developer",
-    "Mid-Century Modern",
-    "Portfolio",
+    "NestJS Developer",
+    "Web Developer Indonesia",
+    "Informatics Engineering",
     "Tangerang",
   ],
+  authors: [{ name: site.name, url: siteUrl }],
+  creator: site.name,
   openGraph: {
     title: `${site.name} — ${site.title}`,
     description: site.intro,
     type: "website",
-    url: site.url,
+    url: "/",
+    siteName: `${site.name} Portfolio`,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — ${site.title}`,
     description: site.intro,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   icons: {
     icon: [
@@ -64,6 +80,42 @@ const themeScript = `
   }
 `;
 
+// JSON-LD Person structured data for technical discoverability & search engines
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: site.title,
+  url: siteUrl,
+  sameAs: [site.social.github, site.social.linkedin],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Tangerang",
+    addressCountry: "ID",
+  },
+  knowsAbout: [
+    "JavaScript",
+    "TypeScript",
+    "Next.js",
+    "React",
+    "PHP",
+    "Laravel",
+    "Filament",
+    "NestJS",
+    "MySQL",
+    "PostgreSQL",
+    "Prisma",
+    "Docker",
+    "REST APIs",
+    "Role-Based Access Control (RBAC)",
+  ],
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    name: "Informatics Engineering",
+  },
+  description: site.intro,
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -78,6 +130,10 @@ export default function RootLayout({
       <head>
         <meta name="color-scheme" content="light dark" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
       </head>
       <body>
         <MotionRoot>

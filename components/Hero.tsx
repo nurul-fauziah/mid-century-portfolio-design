@@ -202,10 +202,10 @@ export default function Hero() {
                   title="Z Monogram"
                 />
                 <span className="font-heading text-sm font-black uppercase tracking-wider text-[color:var(--ink)] mt-3">
-                  Zia Studio
+                  Nurul Fauziah
                 </span>
                 <span className="font-mono text-[0.65rem] font-bold uppercase tracking-widest text-[color:var(--burnt)] mt-0.5">
-                  1950s MODERN
+                  Full Stack Developer
                 </span>
               </div>
             </motion.div>

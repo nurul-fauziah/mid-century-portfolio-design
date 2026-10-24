@@ -14,11 +14,11 @@ export default function NotFound() {
         </p>
 
         <h1 className="font-heading text-3xl sm:text-4xl font-black uppercase tracking-tight text-[color:var(--ink)] my-4">
-          Record Not In Catalog
+          Page Not Found
         </h1>
 
         <p className="font-body text-sm sm:text-base text-[color:var(--ink-muted)] mb-8 leading-relaxed">
-          The requested mid-century portfolio document or route could not be found.
+          The page or project you requested could not be located.
         </p>
 
         <a
@@ -26,7 +26,7 @@ export default function NotFound() {
           className="retro-btn !bg-[color:var(--mustard)] !text-[#2B2118]"
         >
           <ArrowLeft size={15} strokeWidth={2.5} />
-          <span>Return to Cover</span>
+          <span>Back to Home</span>
         </a>
       </div>
     </main>
