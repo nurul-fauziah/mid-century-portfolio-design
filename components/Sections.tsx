@@ -217,31 +217,28 @@ export function Works() {
                 className="group relative flex flex-col justify-between border-2.5 border-[color:var(--ink)] bg-[color:var(--surface)] p-6 sm:p-7 rounded-2xl shadow-[5px_5px_0_var(--ink)] hover:shadow-[9px_9px_0_var(--ink)] hover:-translate-x-1 hover:-translate-y-1 hover:-rotate-0.5 transition-all duration-300"
               >
                 <div>
-                  {/* Record Sleeve Illustration Area with hairline divider */}
-                  <div className="relative w-full aspect-[16/10] overflow-hidden mb-6 flex items-center justify-center p-4 border-b-2 border-[color:var(--ink)]/20 -mx-6 -mt-6 sm:-mx-7 sm:-mt-7 !w-[calc(100%+3rem)] sm:!w-[calc(100%+3.5rem)] rounded-t-[14px] bg-[color:var(--surface-warm)]/70">
-                    {/* Abstract Mid-Century Composition inside sleeve */}
-                    <div className="absolute inset-0 flex items-center justify-around pointer-events-none opacity-90 px-4">
-                      {idx === 0 && (
-                        <div className="relative w-full h-full flex items-center justify-around">
-                          <HalfCircle size={100} orientation="left" fillColor="var(--burnt)" strokeColor="var(--ink)" />
-                          <DotGrid rows={4} cols={5} dotSize={3} gap={12} />
-                          <Starburst size={54} variant="sparkle" fillColor="var(--mustard)" strokeColor="var(--ink)" />
-                        </div>
-                      )}
-                      {idx === 1 && (
-                        <div className="relative w-full h-full flex items-center justify-around">
-                          <Arch width={80} height={100} fillColor="var(--teal)" strokeColor="var(--ink)" />
-                          <Boomerang size={90} fillColor="var(--mustard)" strokeColor="var(--ink)" />
-                        </div>
-                      )}
-                      {idx === 2 && (
-                        <div className="relative w-full h-full flex items-center justify-around">
-                          <Blob size={100} variant={1} fillColor="var(--olive)" strokeColor="var(--ink)" />
-                          <Squiggle width={90} height={20} strokeWidth={2.5} />
-                          <div className="size-10 rounded-full bg-[color:var(--pink)]" />
-                        </div>
-                      )}
-                    </div>
+                  {/* Mid-Century Poster Graphic Composition directly on card */}
+                  <div className="relative w-full aspect-[16/10] mb-6 flex items-center justify-around pointer-events-none opacity-90 px-2">
+                    {idx === 0 && (
+                      <div className="relative w-full h-full flex items-center justify-around">
+                        <HalfCircle size={100} orientation="left" fillColor="var(--burnt)" strokeColor="var(--ink)" />
+                        <DotGrid rows={4} cols={5} dotSize={3} gap={12} />
+                        <Starburst size={54} variant="sparkle" fillColor="var(--mustard)" strokeColor="var(--ink)" />
+                      </div>
+                    )}
+                    {idx === 1 && (
+                      <div className="relative w-full h-full flex items-center justify-around">
+                        <Arch width={80} height={100} fillColor="var(--teal)" strokeColor="var(--ink)" />
+                        <Boomerang size={90} fillColor="var(--mustard)" strokeColor="var(--ink)" />
+                      </div>
+                    )}
+                    {idx === 2 && (
+                      <div className="relative w-full h-full flex items-center justify-around">
+                        <Blob size={100} variant={1} fillColor="var(--olive)" strokeColor="var(--ink)" />
+                        <Squiggle width={90} height={20} strokeWidth={2.5} />
+                        <div className="size-10 rounded-full bg-[color:var(--pink)]" />
+                      </div>
+                    )}
                   </div>
 
                   {/* Category & Title */}
@@ -491,7 +488,7 @@ export function History() {
                 <ul className="space-y-3 font-body text-sm sm:text-base text-[color:var(--ink-muted)] leading-relaxed">
                   {item.resp.map((bullet, bIdx) => (
                     <li key={bIdx} className="flex items-start gap-3">
-                      <span className="size-2 rounded-full bg-[color:var(--burnt)] shrink-0 mt-2 border border-[color:var(--ink)]" />
+                      <span className="size-2 rounded-full bg-[color:var(--burnt)] shrink-0 mt-2" />
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -706,8 +703,8 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Right Column (Cols 7-12): The Single Elevation Form Card */}
-          <div className="lg:col-span-6 bg-[color:var(--surface)] text-[color:var(--ink)] p-6 sm:p-8 rounded-2xl border-2.5 border-[color:var(--ink)] shadow-[6px_6px_0_var(--ink)]">
+          {/* Right Column (Cols 7-12): Clean Form Fields */}
+          <div className="lg:col-span-6">
             {status === "success" ? (
               <div className="py-12 text-center flex flex-col items-center">
                 <div className="size-14 rounded-full bg-[color:var(--teal)] text-[#FFFFFF] grid place-items-center mb-4">
