@@ -51,7 +51,7 @@ export const site = {
     github: "https://github.com/nurul-fauziah",
     linkedin: "https://www.linkedin.com/in/nurul-fauziah/",
   },
-  url: "http://localhost:3000",
+  url: "https://mid-century-portfolio-design.vercel.app",
 };
 
 export const about = {

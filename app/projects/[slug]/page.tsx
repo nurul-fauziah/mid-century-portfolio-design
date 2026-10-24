@@ -29,9 +29,31 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
 
+  if (!project) {
+    return {
+      title: "Project Not Found — Nurul Fauziah",
+    };
+  }
+
+  const path = `/projects/${project.slug}`;
+
   return {
-    title: project ? `${project.name} — Nurul Fauziah` : "Project Not Found",
-    description: project?.summary,
+    title: `${project.name} — Nurul Fauziah`,
+    description: project.summary,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      title: `${project.name} — Nurul Fauziah`,
+      description: project.summary,
+      url: path,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.name} — Nurul Fauziah`,
+      description: project.summary,
+    },
   };
 }
 

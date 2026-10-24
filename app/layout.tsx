@@ -6,7 +6,7 @@ import MotionRoot from "@/components/MotionRoot";
 import { site } from "@/content/site";
 import { fontHeading, fontBody, fontMono } from "./fonts";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || site.url || "http://localhost:3000";
+const siteUrl = "https://mid-century-portfolio-design.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
