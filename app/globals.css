@@ -36,10 +36,10 @@
 
 :root,
 [data-theme="light"] {
-  /* Mid-Century Modern Warm Cream Palette */
-  --paper: #F6EFE0;
-  --ink: #2B2118;
-  --ink-muted: #5A4C40;
+  /* Mid-Century Modern High-Contrast Neutral Gallery Canvas */
+  --paper: #FFFFFF;
+  --ink: #1C1917;
+  --ink-muted: #57534E;
   --mustard: #E3A62B;
   --burnt: #D9622B;
   --teal: #1F7A74;
@@ -47,16 +47,16 @@
   --olive: #7A8450;
   --pink: #E8A598;
 
-  --surface: #FCFAF6;
-  --surface-warm: #EFE6D5;
-  --border: #2B2118;
-  --border-muted: rgba(43, 33, 24, 0.25);
+  --surface: #F8F9FA;
+  --surface-warm: #F1F3F5;
+  --border: #1C1917;
+  --border-muted: rgba(28, 25, 23, 0.22);
 
-  --grain-opacity: 0.045;
+  --grain-opacity: 0.03;
   --grain-blend: multiply;
 
   --logo-fill: var(--ink);
-  --preloader-bg: #F6EFE0;
+  --preloader-bg: #FFFFFF;
   --preloader-accent: #E3A62B;
 
   color-scheme: light;
@@ -65,8 +65,8 @@
 [data-theme="dark"] {
   /* Warm Walnut Mid-Century Dark Mode */
   --paper: #1F1812;
-  --ink: #F6EFE0;
-  --ink-muted: #C4B5A3;
+  --ink: #F5F5F4;
+  --ink-muted: #D6D3D1;
 
   /* Brightened retro accents for rich contrast against walnut */
   --mustard: #F0B238;
@@ -79,7 +79,7 @@
   --surface: #292119;
   --surface-warm: #261E17;
   --border: #EDE5D8;
-  --border-muted: rgba(246, 239, 224, 0.25);
+  --border-muted: rgba(245, 245, 244, 0.25);
 
   --grain-opacity: 0.035;
   --grain-blend: screen;
@@ -94,8 +94,8 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #1F1812;
-    --ink: #F6EFE0;
-    --ink-muted: #C4B5A3;
+    --ink: #F5F5F4;
+    --ink-muted: #D6D3D1;
     --mustard: #F0B238;
     --burnt: #E5733E;
     --teal: #2CA8A0;
@@ -105,7 +105,7 @@
     --surface: #292119;
     --surface-warm: #261E17;
     --border: #EDE5D8;
-    --border-muted: rgba(246, 239, 224, 0.25);
+    --border-muted: rgba(245, 245, 244, 0.25);
     --grain-opacity: 0.035;
     --grain-blend: screen;
     --logo-fill: var(--ink);

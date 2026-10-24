@@ -25,27 +25,27 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   if (!post) {
     return {
-      title: "Post Not Found — Nurul Fauziah",
+      title: "Post Not Found · Nurul Fauziah",
     };
   }
 
   const path = `/blog/${post.slug}`;
 
   return {
-    title: `${post.title} — Nurul Fauziah`,
+    title: `${post.title} · Nurul Fauziah`,
     description: post.excerpt,
     alternates: {
       canonical: path,
     },
     openGraph: {
-      title: `${post.title} — Nurul Fauziah`,
+      title: `${post.title} · Nurul Fauziah`,
       description: post.excerpt,
       url: path,
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} — Nurul Fauziah`,
+      title: `${post.title} · Nurul Fauziah`,
       description: post.excerpt,
     },
   };

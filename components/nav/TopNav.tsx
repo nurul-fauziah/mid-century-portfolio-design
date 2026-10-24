@@ -23,7 +23,7 @@ export default function TopNav() {
         <a
           href={href("home")}
           onClick={() => handleLinkClick("home")}
-          aria-label="Zia — Home"
+          aria-label="Zia, Home"
           className="flex items-center gap-1 group py-1"
         >
           <span className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[color:var(--ink)] group-hover:text-[color:var(--burnt)] transition-colors">
@@ -76,7 +76,7 @@ export default function TopNav() {
           <a
             href={href("contact")}
             onClick={() => handleLinkClick("contact")}
-            className="retro-btn !py-2 !px-4 sm:!px-5 text-xs sm:text-sm !bg-[color:var(--burnt)] !text-[#F6EFE0]"
+            className="retro-btn !py-2 !px-4 sm:!px-5 text-xs sm:text-sm !bg-[color:var(--burnt)] !text-[#FFFFFF]"
           >
             <span>Let&apos;s talk</span>
             <ArrowUpRight size={15} strokeWidth={2.5} />

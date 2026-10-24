@@ -41,7 +41,7 @@ import { ZLogo } from "./ZLogo";
 import { midCenturyEase } from "@/lib/motion";
 
 /* ─────────────────────────────────────────────────────────────
-   02 — PROFILE · ABOUT (Mustard dominant / Warm paper block)
+   02. PROFILE · ABOUT (Mustard dominant / Warm paper block)
    ───────────────────────────────────────────────────────────── */
 export function Profile() {
   return (
@@ -56,25 +56,6 @@ export function Profile() {
       </div>
 
       <div className="mx-auto max-w-[1300px] px-6 sm:px-10 relative z-10">
-        {/* Section Header */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-12 sm:mb-16">
-          <div className="flex items-center gap-3">
-            <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] bg-[color:var(--mustard)] text-[#2B2118] px-3 py-1 rounded border-2 border-[color:var(--ink)] shadow-[2px_2px_0_var(--ink)]">
-              02 — ABOUT
-            </span>
-            <span className="font-heading text-sm font-bold uppercase tracking-wider text-[color:var(--ink-muted)]">
-              Background & Technical Approach
-            </span>
-          </div>
-
-          <div className="hidden sm:flex items-center gap-2">
-            <Starburst size={28} variant="sparkle" fillColor="var(--mustard)" strokeColor="var(--ink)" />
-            <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-              EST. 2026 · TANGERANG
-            </span>
-          </div>
-        </div>
-
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-start">
           {/* Left Column (Cols 1-5): Cut-Paper Arch Composition & Quick Vintage Badges */}
           <div className="lg:col-span-5 flex flex-col items-center sm:items-start gap-8">
@@ -87,7 +68,7 @@ export function Profile() {
               <div className="relative w-full h-full cut-paper-arch bg-[color:var(--surface)] border-2.5 border-[color:var(--ink)] p-6 flex flex-col justify-between items-center text-center">
                 {/* Top starburst decoration */}
                 <div className="flex justify-between w-full items-center">
-                  <span className="font-mono text-[0.65rem] font-bold uppercase tracking-widest text-[color:var(--ink-muted)]">
+                  <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
                     EDITION · 01
                   </span>
                   <Starburst size={24} variant="sparkle" fillColor="var(--burnt)" strokeColor="var(--ink)" />
@@ -95,7 +76,7 @@ export function Profile() {
 
                 {/* Center Calligraphy Monogram */}
                 <div className="my-auto flex flex-col items-center">
-                  <div className="p-4 rounded-2xl border-2 border-[color:var(--ink)] bg-[color:var(--paper)] shadow-[3px_3px_0_var(--ink)]">
+                  <div className="p-2 flex items-center justify-center">
                     <ZLogo size={64} variant="animated" strokeColor="var(--ink)" fillColor="var(--ink)" />
                   </div>
                   <h3 className="font-heading text-lg font-black uppercase tracking-tight text-[color:var(--ink)] mt-4">
@@ -195,7 +176,7 @@ export function Profile() {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   03 — WORKS · PROJECTS (Teal dominant / Record Sleeve Cards)
+   03. WORKS · PROJECTS (Teal dominant / Record Sleeve Cards)
    ───────────────────────────────────────────────────────────── */
 export function Works() {
   return (
@@ -208,14 +189,6 @@ export function Works() {
         {/* Section Header */}
         <div className="flex flex-wrap items-end justify-between gap-6 mb-12 sm:mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] bg-[color:var(--teal)] text-[#F6EFE0] px-3 py-1 rounded border-2 border-[color:var(--ink)] shadow-[2px_2px_0_var(--ink)]">
-                03 — PROJECTS
-              </span>
-              <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-                0{projects.length} PROJECTS
-              </span>
-            </div>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[color:var(--ink)] leading-[0.95]">
               Selected Projects
             </h2>
@@ -249,8 +222,7 @@ export function Works() {
                 <div>
                   {/* Record Sleeve Poster Header Illustration */}
                   <div
-                    className="relative w-full aspect-[16/10] border-2 border-[color:var(--ink)] rounded-xl overflow-hidden mb-6 flex items-center justify-center p-4"
-                    style={{ backgroundColor: "var(--surface-warm)" }}
+                    className="relative w-full aspect-[16/10] bg-[color:var(--surface-warm)] rounded-xl overflow-hidden mb-6 flex items-center justify-center p-4"
                   >
                     {/* Abstract Mid-Century Composition inside sleeve */}
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-90">
@@ -277,8 +249,8 @@ export function Works() {
                     </div>
 
                     {/* Badge on sleeve */}
-                    <span className="relative z-10 font-mono text-[0.65rem] font-bold uppercase tracking-wider bg-[color:var(--paper)] text-[color:var(--ink)] px-2.5 py-1 rounded border border-[color:var(--ink)] shadow-[2px_2px_0_var(--ink)]">
-                      PROJECT 0{idx + 1} · {project.role}
+                    <span className="relative z-10 font-mono text-[0.65rem] font-bold uppercase tracking-wider bg-[color:var(--ink)] text-[color:var(--paper)] px-2.5 py-1 rounded">
+                      Project 0{idx + 1} · {project.role}
                     </span>
                   </div>
 
@@ -309,7 +281,7 @@ export function Works() {
                     {project.stack.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-0.5 text-[0.68rem] font-mono font-bold uppercase border border-[color:var(--ink)]/40 rounded bg-[color:var(--surface-warm)] text-[color:var(--ink)]"
+                        className="px-2 py-0.5 text-[0.68rem] font-mono font-bold uppercase rounded bg-[color:var(--surface-warm)] text-[color:var(--ink)]"
                       >
                         {tech}
                       </span>
@@ -371,7 +343,7 @@ export function Works() {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   04 — STACK · SKILLS (ONE Flat Grid with Geometric Tiles)
+   04. STACK · SKILLS (ONE Flat Grid with Geometric Tiles)
    ───────────────────────────────────────────────────────────── */
 export function Stack() {
   // Rotating shape styles for mid-century variety:
@@ -406,14 +378,6 @@ export function Stack() {
         {/* Section Header */}
         <div className="flex flex-wrap items-end justify-between gap-6 mb-12 sm:mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] bg-[color:var(--navy)] text-[#F6EFE0] px-3 py-1 rounded border-2 border-[color:var(--ink)] shadow-[2px_2px_0_var(--ink)]">
-                04 — SKILLS
-              </span>
-              <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-                TECHNICAL TOOLKIT
-              </span>
-            </div>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[color:var(--ink)] leading-[0.95]">
               Technologies &amp; Tools
             </h2>
@@ -442,7 +406,7 @@ export function Stack() {
               >
                 {/* Geometric Tile Badge for Icon */}
                 <div
-                  className={`size-12 sm:size-14 grid place-items-center rounded-xl border border-[color:var(--ink)]/40 mb-3 transition-transform duration-200 group-hover:scale-110 ${colorClass.bg}`}
+                  className={`size-12 sm:size-14 grid place-items-center rounded-xl mb-3 transition-transform duration-200 group-hover:scale-110 ${colorClass.bg}`}
                 >
                   {iconData ? (
                     <svg
@@ -483,7 +447,7 @@ export function Stack() {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   05 — HISTORY · EXPERIENCE (Olive green / Geometric Timeline)
+   05. HISTORY · EXPERIENCE (Olive green / Geometric Timeline)
    ───────────────────────────────────────────────────────────── */
 export function History() {
   return (
@@ -496,14 +460,6 @@ export function History() {
         {/* Section Header */}
         <div className="flex flex-wrap items-end justify-between gap-6 mb-14 sm:mb-18">
           <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] bg-[color:var(--olive)] text-[#F6EFE0] px-3 py-1 rounded border-2 border-[color:var(--ink)] shadow-[2px_2px_0_var(--ink)]">
-                05 — EXPERIENCE
-              </span>
-              <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-                WORK HISTORY
-              </span>
-            </div>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[color:var(--ink)] leading-[0.95]">
               Work History
             </h2>
@@ -552,7 +508,7 @@ export function History() {
                     </p>
                   </div>
 
-                  <span className="font-mono text-xs font-bold px-2.5 py-1 bg-[color:var(--surface-warm)] border border-[color:var(--ink)] rounded">
+                  <span className="font-mono text-xs font-bold px-2.5 py-1 bg-[color:var(--surface-warm)] rounded">
                     PHASE 0{idx + 1}
                   </span>
                 </div>
@@ -569,7 +525,7 @@ export function History() {
 
                 {/* Reflection Note */}
                 {item.note && (
-                  <p className="mt-5 p-3.5 border-l-3 border-[color:var(--olive)] bg-[color:var(--surface-warm)]/60 font-body text-xs sm:text-sm italic text-[color:var(--ink)] rounded-r">
+                  <p className="mt-5 p-3.5 bg-[color:var(--surface-warm)]/60 font-body text-xs sm:text-sm italic text-[color:var(--ink)] rounded-lg">
                     &ldquo;{item.note}&rdquo;
                   </p>
                 )}
@@ -577,7 +533,10 @@ export function History() {
                 {/* Tech pills */}
                 <div className="mt-5 pt-4 border-t border-[color:var(--ink)]/20 flex flex-wrap gap-2">
                   {item.tech.map((t) => (
-                    <span key={t} className="retro-tag text-[0.7rem]">
+                    <span
+                      key={t}
+                      className="font-mono text-[0.7rem] font-bold uppercase px-2.5 py-1 rounded bg-[color:var(--surface-warm)] text-[color:var(--ink)]"
+                    >
                       {t}
                     </span>
                   ))}
@@ -595,7 +554,7 @@ export function History() {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   06 — WRITING · BLOG (Cobalt Navy / Magazine Editorial List)
+   06. WRITING · BLOG (Cobalt Navy / Magazine Editorial List)
    ───────────────────────────────────────────────────────────── */
 export function Writing() {
   return (
@@ -608,14 +567,6 @@ export function Writing() {
         {/* Section Header */}
         <div className="flex flex-wrap items-end justify-between gap-6 mb-12 sm:mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] bg-[color:var(--navy)] text-[#F6EFE0] px-3 py-1 rounded border-2 border-[color:var(--ink)] shadow-[2px_2px_0_var(--ink)]">
-                06 — JOURNAL
-              </span>
-              <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-                NOTES &amp; REFLECTIONS
-              </span>
-            </div>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[color:var(--ink)] leading-[0.95]">
               Articles &amp; Notes
             </h2>
@@ -687,7 +638,7 @@ export function Writing() {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   07 — CONTACT · LET'S TALK (Burnt Orange / Atomic Starburst)
+   07. CONTACT · LET'S TALK (Burnt Orange / Atomic Starburst)
    ───────────────────────────────────────────────────────────── */
 export function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -734,195 +685,179 @@ export function Contact() {
     <section
       id="contact"
       aria-label="Contact section"
-      className="relative w-full bg-[color:var(--paper)] py-20 sm:py-28 lg:py-32 overflow-hidden transition-colors md:pl-20 lg:pl-24"
+      className="relative w-full bg-[color:var(--surface-warm)]/40 py-20 sm:py-28 lg:py-32 overflow-hidden transition-colors md:pl-20 lg:pl-24"
     >
       <div className="mx-auto max-w-[1300px] px-6 sm:px-10 relative z-10">
-        {/* Main Bold Mid-Century CTA Container */}
-        <div className="relative border-3 border-[color:var(--ink)] bg-[color:var(--burnt)] p-8 sm:p-12 lg:p-16 rounded-3xl shadow-[8px_8px_0_var(--ink)] text-[#F6EFE0] overflow-hidden">
-          {/* Rotating Atomic Starburst in Background */}
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 75, repeat: Infinity, ease: "linear" }}
-            className="absolute -right-16 -top-16 opacity-25 pointer-events-none hidden sm:block"
-          >
-            <Starburst size={320} variant="atomic" strokeColor="#F6EFE0" fillColor="#F6EFE0" />
-          </motion.div>
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-14 items-start">
+          {/* Left Column (Cols 1-6): Poster CTA & Contact Details */}
+          <div className="lg:col-span-6 flex flex-col justify-between">
+            <div>
+              <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.95] text-[color:var(--ink)]">
+                Let&apos;s talk about building software.
+              </h2>
 
-          <div className="grid gap-12 lg:grid-cols-12 lg:gap-14 relative z-10">
-            {/* Left Column (Cols 1-6): Poster CTA & Contact Details */}
-            <div className="lg:col-span-6 flex flex-col justify-between">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[color:var(--mustard)] border-2 border-[color:var(--ink)] text-[#2B2118] font-mono text-xs font-bold uppercase rounded-md shadow-[2px_2px_0_var(--ink)] mb-6">
-                  <span>07 — GET IN TOUCH</span>
-                </div>
+              <p className="mt-5 font-body text-base sm:text-lg text-[color:var(--ink-muted)] max-w-lg leading-relaxed">
+                I am open to Full Stack Developer opportunities, engineering roles, and collaborative projects. Feel free to reach out directly by email or through the form.
+              </p>
+            </div>
 
-                <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[0.95] text-[#F6EFE0]">
-                  Let&apos;s talk about building software.
-                </h2>
+            {/* Direct Channels */}
+            <div className="mt-10 pt-8 border-t-2 border-[color:var(--ink)]/20 space-y-4">
+              <a
+                href={`mailto:${site.email}`}
+                className="inline-flex items-center gap-3 font-mono text-sm sm:text-base font-bold text-[color:var(--burnt)] hover:underline transition-colors"
+              >
+                <Mail size={18} strokeWidth={2.2} />
+                <span>{site.email}</span>
+              </a>
 
-                <p className="mt-5 font-body text-base sm:text-lg text-[#F6EFE0]/90 max-w-lg leading-relaxed">
-                  I am open to Full Stack Developer opportunities, engineering roles, and collaborative projects. Feel free to reach out directly by email or form.
-                </p>
-              </div>
-
-              {/* Direct Channels */}
-              <div className="mt-10 pt-8 border-t-2 border-[#F6EFE0]/30 space-y-4">
+              <div className="flex flex-wrap items-center gap-3 pt-2">
                 <a
-                  href={`mailto:${site.email}`}
-                  className="inline-flex items-center gap-3 font-mono text-sm sm:text-base font-bold text-[#F6EFE0] hover:text-[color:var(--mustard)] transition-colors"
+                  href={site.social.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="retro-btn-outline !py-1.5 !px-3.5 text-xs font-mono"
                 >
-                  <Mail size={18} strokeWidth={2.2} />
-                  <span>{site.email}</span>
+                  <Github size={14} />
+                  <span>GitHub</span>
                 </a>
 
-                <div className="flex flex-wrap items-center gap-3 pt-2">
-                  <a
-                    href={site.social.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[#2B2118] font-mono text-xs font-bold uppercase shadow-[2.5px_2.5px_0_var(--ink)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0_var(--ink)] transition-all"
-                  >
-                    <Github size={14} />
-                    <span>GitHub</span>
-                  </a>
+                <a
+                  href={site.social.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="retro-btn-outline !py-1.5 !px-3.5 text-xs font-mono"
+                >
+                  <Linkedin size={14} />
+                  <span>LinkedIn</span>
+                </a>
 
-                  <a
-                    href={site.social.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[#2B2118] font-mono text-xs font-bold uppercase shadow-[2.5px_2.5px_0_var(--ink)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0_var(--ink)] transition-all"
-                  >
-                    <Linkedin size={14} />
-                    <span>LinkedIn</span>
-                  </a>
-
-                  <span className="font-mono text-xs text-[#F6EFE0]/80">
-                    · {site.location}
-                  </span>
-                </div>
+                <span className="font-mono text-xs text-[color:var(--ink-muted)]">
+                  · {site.location}
+                </span>
               </div>
             </div>
+          </div>
 
-            {/* Right Column (Cols 7-12): Clean Mid-Century Form */}
-            <div className="lg:col-span-6 bg-[color:var(--surface)] text-[color:var(--ink)] p-6 sm:p-8 rounded-2xl border-2.5 border-[color:var(--ink)] shadow-[6px_6px_0_var(--ink)]">
-              {status === "success" ? (
-                <div className="py-12 text-center flex flex-col items-center">
-                  <div className="size-14 rounded-full bg-[color:var(--teal)] text-[#F6EFE0] grid place-items-center mb-4 border-2 border-[color:var(--ink)] shadow-[3px_3px_0_var(--ink)]">
-                    <CheckCircle2 size={32} />
-                  </div>
-                  <h3 className="font-heading text-2xl font-black uppercase text-[color:var(--ink)]">
-                    Message Received!
-                  </h3>
-                  <p className="font-body text-sm text-[color:var(--ink-muted)] mt-2 max-w-sm">
-                    Thank you for reaching out. I&apos;ll get back to you promptly.
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => setStatus("idle")}
-                    className="retro-btn !bg-[color:var(--mustard)] !text-[#2B2118] mt-6 !py-2 !px-5 text-xs"
-                  >
-                    Send another message
-                  </button>
+          {/* Right Column (Cols 7-12): The Single Elevation Form Card */}
+          <div className="lg:col-span-6 bg-[color:var(--surface)] text-[color:var(--ink)] p-6 sm:p-8 rounded-2xl border-2.5 border-[color:var(--ink)] shadow-[6px_6px_0_var(--ink)]">
+            {status === "success" ? (
+              <div className="py-12 text-center flex flex-col items-center">
+                <div className="size-14 rounded-full bg-[color:var(--teal)] text-[#FFFFFF] grid place-items-center mb-4">
+                  <CheckCircle2 size={32} />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Honeypot field for bot protection */}
-                  <div className="hidden" aria-hidden="true">
-                    <label htmlFor="company">Company</label>
-                    <input type="text" id="company" name="company" tabIndex={-1} autoComplete="off" />
-                  </div>
+                <h3 className="font-heading text-2xl font-black uppercase text-[color:var(--ink)]">
+                  Message Received!
+                </h3>
+                <p className="font-body text-sm text-[color:var(--ink-muted)] mt-2 max-w-sm">
+                  Thank you for reaching out. I&apos;ll get back to you promptly.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setStatus("idle")}
+                  className="retro-btn !bg-[color:var(--mustard)] !text-[#2B2118] mt-6 !py-2 !px-5 text-xs"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Honeypot field for bot protection */}
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="company">Company</label>
+                  <input type="text" id="company" name="company" tabIndex={-1} autoComplete="off" />
+                </div>
 
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="font-mono text-xs font-bold uppercase tracking-wider block text-[color:var(--ink)] mb-1"
-                    >
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      placeholder="Your name"
-                      className="w-full px-4 py-2.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[color:var(--ink)] font-body text-sm shadow-[2.5px_2.5px_0_var(--ink)] focus:outline-none focus:ring-2 focus:ring-[color:var(--mustard)]"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="font-mono text-xs font-bold uppercase tracking-wider block text-[color:var(--ink)] mb-1"
-                    >
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      placeholder="your.email@example.com"
-                      className="w-full px-4 py-2.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[color:var(--ink)] font-body text-sm shadow-[2.5px_2.5px_0_var(--ink)] focus:outline-none focus:ring-2 focus:ring-[color:var(--mustard)]"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="font-mono text-xs font-bold uppercase tracking-wider block text-[color:var(--ink)] mb-1"
-                    >
-                      Subject *
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      required
-                      placeholder="Project opportunity / Inquiry"
-                      className="w-full px-4 py-2.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[color:var(--ink)] font-body text-sm shadow-[2.5px_2.5px_0_var(--ink)] focus:outline-none focus:ring-2 focus:ring-[color:var(--mustard)]"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="font-mono text-xs font-bold uppercase tracking-wider block text-[color:var(--ink)] mb-1"
-                    >
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={4}
-                      placeholder="Tell me about your project, timeline, or idea..."
-                      className="w-full px-4 py-2.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[color:var(--ink)] font-body text-sm shadow-[2.5px_2.5px_0_var(--ink)] focus:outline-none focus:ring-2 focus:ring-[color:var(--mustard)] resize-none"
-                    />
-                  </div>
-
-                  {status === "error" && (
-                    <p className="font-mono text-xs font-bold text-[color:var(--burnt)] bg-[color:var(--mustard)]/20 p-2.5 rounded border border-[color:var(--burnt)]">
-                      {errorMessage}
-                    </p>
-                  )}
-
-                  <button
-                    type="submit"
-                    disabled={status === "sending"}
-                    className="w-full retro-btn !bg-[color:var(--mustard)] !text-[#2B2118] !py-3 font-black text-sm tracking-wide mt-2"
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="font-mono text-xs font-bold uppercase tracking-wider block text-[color:var(--ink)] mb-1"
                   >
-                    {status === "sending" ? (
-                      <span>Sending message...</span>
-                    ) : (
-                      <>
-                        <span>Send Message</span>
-                        <Send size={15} strokeWidth={2.5} />
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
-            </div>
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Your name"
+                    className="w-full px-4 py-2.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[color:var(--ink)] font-body text-sm focus:outline-none focus:ring-2 focus:ring-[color:var(--mustard)]"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="font-mono text-xs font-bold uppercase tracking-wider block text-[color:var(--ink)] mb-1"
+                  >
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="your.email@example.com"
+                    className="w-full px-4 py-2.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[color:var(--ink)] font-body text-sm focus:outline-none focus:ring-2 focus:ring-[color:var(--mustard)]"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="subject"
+                    className="font-mono text-xs font-bold uppercase tracking-wider block text-[color:var(--ink)] mb-1"
+                  >
+                    Subject *
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    placeholder="Project opportunity / Inquiry"
+                    className="w-full px-4 py-2.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[color:var(--ink)] font-body text-sm focus:outline-none focus:ring-2 focus:ring-[color:var(--mustard)]"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="font-mono text-xs font-bold uppercase tracking-wider block text-[color:var(--ink)] mb-1"
+                  >
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={4}
+                    placeholder="Tell me about your project, timeline, or idea..."
+                    className="w-full px-4 py-2.5 rounded-lg border-2 border-[color:var(--ink)] bg-[color:var(--paper)] text-[color:var(--ink)] font-body text-sm focus:outline-none focus:ring-2 focus:ring-[color:var(--mustard)] resize-none"
+                  />
+                </div>
+
+                {status === "error" && (
+                  <p className="font-mono text-xs font-bold text-[color:var(--burnt)] bg-[color:var(--mustard)]/20 p-2.5 rounded border border-[color:var(--burnt)]">
+                    {errorMessage}
+                  </p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={status === "sending"}
+                  className="w-full retro-btn !bg-[color:var(--burnt)] !text-[#FFFFFF] !py-3 font-black text-sm tracking-wide mt-2"
+                >
+                  {status === "sending" ? (
+                    <span>Sending message...</span>
+                  ) : (
+                    <>
+                      <span>Send Message</span>
+                      <Send size={15} strokeWidth={2.5} />
+                    </>
+                  )}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ export default function SideNav() {
                 key={id}
                 href={href(id)}
                 onClick={() => go(id)}
-                aria-label={`${num} — ${label}`}
+                aria-label={`${num}. ${label}`}
                 aria-current={isActive ? "true" : undefined}
                 className={`group relative flex items-center justify-center w-full py-1.5 px-1 rounded-lg transition-all ${
                   isActive

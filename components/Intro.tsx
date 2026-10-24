@@ -116,12 +116,12 @@ export default function Intro() {
             </div>
 
             {/* Sub-label */}
-            <p className="font-mono text-[0.7rem] uppercase tracking-[0.25em] text-[#2B2118] font-bold mb-3">
-              00 — EST. 2026
+            <p className="font-mono text-xs text-[#2B2118] font-bold mb-3">
+              Est. 2026
             </p>
 
             {/* Animated Calligraphy Z Logo */}
-            <div className="my-2 p-3 bg-[color:var(--paper)] rounded-xl border-2 border-[color:var(--ink)] shadow-[3px_3px_0_var(--ink)]">
+            <div className="my-2 p-2 flex items-center justify-center">
               <ZLogo
                 size={68}
                 variant="animated"

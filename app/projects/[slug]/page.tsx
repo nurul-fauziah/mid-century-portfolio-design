@@ -31,27 +31,27 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
   if (!project) {
     return {
-      title: "Project Not Found — Nurul Fauziah",
+      title: "Project Not Found · Nurul Fauziah",
     };
   }
 
   const path = `/projects/${project.slug}`;
 
   return {
-    title: `${project.name} — Nurul Fauziah`,
+    title: `${project.name} · Nurul Fauziah`,
     description: project.summary,
     alternates: {
       canonical: path,
     },
     openGraph: {
-      title: `${project.name} — Nurul Fauziah`,
+      title: `${project.name} · Nurul Fauziah`,
       description: project.summary,
       url: path,
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.name} — Nurul Fauziah`,
+      title: `${project.name} · Nurul Fauziah`,
       description: project.summary,
     },
   };
@@ -228,7 +228,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               </div>
             ) : (
               <p className="text-sm font-mono text-[color:var(--ink-muted)]">
-                Internal enterprise platform — proprietary source code.
+                Internal enterprise platform. Proprietary source code.
               </p>
             )}
           </ProjectSection>

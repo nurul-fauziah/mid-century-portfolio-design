@@ -32,18 +32,15 @@ export default function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
           {/* Left Column (Cols 1-7): Oversized Vintage Poster Headline & Copy */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Section Index Eyebrow */}
+            {/* Location Tag */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: midCenturyEase }}
               className="flex items-center gap-2 mb-4 sm:mb-6"
             >
-              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[color:var(--burnt)] bg-[color:var(--surface-warm)] px-2.5 py-1 rounded border border-[color:var(--ink)]">
-                01 — POSTER NO. 26
-              </span>
               <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
-                {site.location}
+                Portfolio · Based in {site.location}
               </span>
             </motion.div>
 

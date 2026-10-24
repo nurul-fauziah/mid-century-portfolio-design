@@ -11,8 +11,8 @@ const siteUrl = "https://mid-century-portfolio-design.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${site.name} — ${site.title}`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} · ${site.title}`,
+    template: `%s · ${site.name}`,
   },
   description: site.intro,
   applicationName: site.name,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   authors: [{ name: site.name, url: siteUrl }],
   creator: site.name,
   openGraph: {
-    title: `${site.name} — ${site.title}`,
+    title: `${site.name} · ${site.title}`,
     description: site.intro,
     type: "website",
     url: "/",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.title}`,
+    title: `${site.name} · ${site.title}`,
     description: site.intro,
   },
   robots: {
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F6EFE0" },
+    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
     { media: "(prefers-color-scheme: dark)", color: "#1F1812" },
   ],
 };

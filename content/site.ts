@@ -307,7 +307,7 @@ export const posts: Post[] = [
       { t: "h", v: "Understanding the workflow before writing the code" },
       {
         t: "p",
-        v: "When building internal tools—like an RBAC portal or a finance dashboard—it is tempting to jump straight into creating UI components. But the real friction in daily operations rarely comes from missing visual flair. It comes from misaligned workflows: a form asking for information the operator doesn't have yet, or a database schema that cannot handle a normal business exception.",
+        v: "When building internal tools, like an RBAC portal or a finance dashboard, it is tempting to jump straight into creating UI components. But the real friction in daily operations rarely comes from missing visual flair. It comes from misaligned workflows: a form asking for information the operator doesn't have yet, or a database schema that cannot handle a normal business exception.",
       },
       { t: "h", v: "Keep the database model honest" },
       {
