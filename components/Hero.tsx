@@ -189,19 +189,19 @@ export default function Hero() {
                 />
               </motion.div>
 
-              {/* Layer 5: Center Poster Medallion with Calligraphy Z Monogram */}
-              <div className="relative z-25 p-7 bg-[color:var(--paper)] border-2.5 border-[color:var(--ink)] rounded-2xl shadow-[6px_6px_0_var(--ink)] flex flex-col items-center justify-center text-center max-w-[220px]">
+              {/* Layer 5: Center Poster Monogram & Typography */}
+              <div className="relative z-25 flex flex-col items-center justify-center text-center p-4">
                 <ZLogo
-                  size={72}
+                  size={76}
                   variant="animated"
                   strokeColor="var(--ink)"
                   fillColor="var(--ink)"
                   title="Z Monogram"
                 />
-                <span className="font-heading text-sm font-black uppercase tracking-wider text-[color:var(--ink)] mt-3">
+                <span className="font-heading text-base font-black uppercase tracking-wider text-[color:var(--ink)] mt-3">
                   Nurul Fauziah
                 </span>
-                <span className="font-mono text-[0.65rem] font-bold uppercase tracking-widest text-[color:var(--burnt)] mt-0.5">
+                <span className="font-mono text-xs font-bold uppercase tracking-widest text-[color:var(--burnt)] mt-1">
                   Full Stack Developer
                 </span>
               </div>

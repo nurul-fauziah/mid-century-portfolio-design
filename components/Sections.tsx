@@ -61,11 +61,8 @@ export function Profile() {
           <div className="lg:col-span-5 flex flex-col items-center sm:items-start gap-8">
             {/* Visual Cut-Paper Portrait Frame */}
             <div className="relative w-full max-w-[340px] aspect-[4/5] mx-auto sm:mx-0">
-              {/* Outer offset shadow border */}
-              <div className="absolute inset-0 bg-[color:var(--mustard)] cut-paper-arch translate-x-2 translate-y-2 border-2.5 border-[color:var(--ink)]" />
-              
               {/* Main Cut-Paper Container */}
-              <div className="relative w-full h-full cut-paper-arch bg-[color:var(--surface)] border-2.5 border-[color:var(--ink)] p-6 flex flex-col justify-between items-center text-center">
+              <div className="relative w-full h-full cut-paper-arch bg-[color:var(--surface)] border-2.5 border-[color:var(--ink)] shadow-[7px_7px_0_var(--mustard)] p-6 flex flex-col justify-between items-center text-center">
                 {/* Top starburst decoration */}
                 <div className="flex justify-between w-full items-center">
                   <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
@@ -220,12 +217,10 @@ export function Works() {
                 className="group relative flex flex-col justify-between border-2.5 border-[color:var(--ink)] bg-[color:var(--surface)] p-6 sm:p-7 rounded-2xl shadow-[5px_5px_0_var(--ink)] hover:shadow-[9px_9px_0_var(--ink)] hover:-translate-x-1 hover:-translate-y-1 hover:-rotate-0.5 transition-all duration-300"
               >
                 <div>
-                  {/* Record Sleeve Poster Header Illustration */}
-                  <div
-                    className="relative w-full aspect-[16/10] bg-[color:var(--surface-warm)] rounded-xl overflow-hidden mb-6 flex items-center justify-center p-4"
-                  >
+                  {/* Record Sleeve Illustration Area with hairline divider */}
+                  <div className="relative w-full aspect-[16/10] overflow-hidden mb-6 flex items-center justify-center p-4 border-b-2 border-[color:var(--ink)]/20 -mx-6 -mt-6 sm:-mx-7 sm:-mt-7 !w-[calc(100%+3rem)] sm:!w-[calc(100%+3.5rem)] rounded-t-[14px] bg-[color:var(--surface-warm)]/70">
                     {/* Abstract Mid-Century Composition inside sleeve */}
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-90">
+                    <div className="absolute inset-0 flex items-center justify-around pointer-events-none opacity-90 px-4">
                       {idx === 0 && (
                         <div className="relative w-full h-full flex items-center justify-around">
                           <HalfCircle size={100} orientation="left" fillColor="var(--burnt)" strokeColor="var(--ink)" />
@@ -243,15 +238,10 @@ export function Works() {
                         <div className="relative w-full h-full flex items-center justify-around">
                           <Blob size={100} variant={1} fillColor="var(--olive)" strokeColor="var(--ink)" />
                           <Squiggle width={90} height={20} strokeWidth={2.5} />
-                          <div className="size-10 rounded-full border-2 border-[color:var(--ink)] bg-[color:var(--pink)]" />
+                          <div className="size-10 rounded-full bg-[color:var(--pink)]" />
                         </div>
                       )}
                     </div>
-
-                    {/* Badge on sleeve */}
-                    <span className="relative z-10 font-mono text-[0.65rem] font-bold uppercase tracking-wider bg-[color:var(--ink)] text-[color:var(--paper)] px-2.5 py-1 rounded">
-                      Project 0{idx + 1} · {project.role}
-                    </span>
                   </div>
 
                   {/* Category & Title */}
@@ -262,7 +252,7 @@ export function Works() {
                     >
                       {project.category}
                     </span>
-                    <span className="font-mono text-[0.65rem] font-bold text-[color:var(--ink-muted)]">
+                    <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
                       0{idx + 1} / 0{projects.length}
                     </span>
                   </div>
@@ -276,21 +266,9 @@ export function Works() {
                     {project.summary}
                   </p>
 
-                  {/* Tech stack chips */}
-                  <div className="mt-5 flex flex-wrap gap-1.5">
-                    {project.stack.slice(0, 4).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-0.5 text-[0.68rem] font-mono font-bold uppercase rounded bg-[color:var(--surface-warm)] text-[color:var(--ink)]"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.stack.length > 4 && (
-                      <span className="px-1.5 py-0.5 text-[0.68rem] font-mono font-bold text-[color:var(--ink-muted)]">
-                        +{project.stack.length - 4}
-                      </span>
-                    )}
+                  {/* Tech stack */}
+                  <div className="mt-5 pt-3 border-t border-[color:var(--ink)]/15 font-mono text-xs text-[color:var(--ink-muted)] font-bold">
+                    {project.stack.join(" · ")}
                   </div>
                 </div>
 
@@ -305,16 +283,16 @@ export function Works() {
                   </Link>
 
                   {/* External links if available */}
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-3">
                     {project.live && (
                       <a
                         href={project.live}
                         target="_blank"
                         rel="noreferrer"
                         aria-label={`Live demo for ${project.name}`}
-                        className="p-1.5 rounded border border-[color:var(--ink)] hover:bg-[color:var(--mustard)] transition-colors"
+                        className="p-1 text-[color:var(--ink)] hover:text-[color:var(--burnt)] transition-colors"
                       >
-                        <ExternalLink size={13} strokeWidth={2.2} />
+                        <ExternalLink size={15} strokeWidth={2.2} />
                       </a>
                     )}
                     {project.repo && (
@@ -323,9 +301,9 @@ export function Works() {
                         target="_blank"
                         rel="noreferrer"
                         aria-label={`GitHub repo for ${project.name}`}
-                        className="p-1.5 rounded border border-[color:var(--ink)] hover:bg-[color:var(--mustard)] transition-colors"
+                        className="p-1 text-[color:var(--ink)] hover:text-[color:var(--burnt)] transition-colors"
                       >
-                        <Github size={13} strokeWidth={2.2} />
+                        <Github size={15} strokeWidth={2.2} />
                       </a>
                     )}
                   </div>
@@ -404,26 +382,22 @@ export function Stack() {
                 transition={{ duration: 0.5, delay: (idx % 7) * 0.05, ease: midCenturyEase }}
                 className={`group relative flex flex-col items-center justify-center p-4 sm:p-5 border-2 border-[color:var(--ink)] bg-[color:var(--surface)] shadow-[3.5px_3.5px_0_var(--ink)] hover:shadow-[6px_6px_0_var(--ink)] hover:-translate-x-1 hover:-translate-y-1 hover:rotate-1 transition-all duration-200 cursor-default select-none ${shapeClass}`}
               >
-                {/* Geometric Tile Badge for Icon */}
-                <div
-                  className={`size-12 sm:size-14 grid place-items-center rounded-xl mb-3 transition-transform duration-200 group-hover:scale-110 ${colorClass.bg}`}
-                >
-                  {iconData ? (
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="size-6 sm:size-7 fill-current"
-                      style={{ color: iconData.color || "var(--ink)" }}
-                      aria-hidden="true"
-                    >
-                      <title>{iconData.title}</title>
-                      <path d={iconData.path} />
-                    </svg>
-                  ) : (
-                    <span className="font-heading font-black text-sm">
-                      {skillName.slice(0, 2).toUpperCase()}
-                    </span>
-                  )}
-                </div>
+                {/* Tech Icon sitting directly on the geometric tile */}
+                {iconData ? (
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="size-8 sm:size-9 fill-current mb-3 transition-transform duration-200 group-hover:scale-110"
+                    style={{ color: iconData.color || "var(--ink)" }}
+                    aria-hidden="true"
+                  >
+                    <title>{iconData.title}</title>
+                    <path d={iconData.path} />
+                  </svg>
+                ) : (
+                  <span className="font-heading font-black text-lg mb-3">
+                    {skillName.slice(0, 2).toUpperCase()}
+                  </span>
+                )}
 
                 {/* Skill Name */}
                 <span className="font-heading text-xs sm:text-sm font-bold text-[color:var(--ink)] text-center tracking-tight leading-tight">
@@ -508,7 +482,7 @@ export function History() {
                     </p>
                   </div>
 
-                  <span className="font-mono text-xs font-bold px-2.5 py-1 bg-[color:var(--surface-warm)] rounded">
+                  <span className="font-mono text-xs font-bold text-[color:var(--ink-muted)]">
                     PHASE 0{idx + 1}
                   </span>
                 </div>
@@ -525,21 +499,14 @@ export function History() {
 
                 {/* Reflection Note */}
                 {item.note && (
-                  <p className="mt-5 p-3.5 bg-[color:var(--surface-warm)]/60 font-body text-xs sm:text-sm italic text-[color:var(--ink)] rounded-lg">
+                  <p className="mt-4 pl-3.5 border-l-2 border-[color:var(--ink)]/20 font-body text-xs sm:text-sm italic text-[color:var(--ink-muted)] leading-relaxed">
                     &ldquo;{item.note}&rdquo;
                   </p>
                 )}
 
-                {/* Tech pills */}
-                <div className="mt-5 pt-4 border-t border-[color:var(--ink)]/20 flex flex-wrap gap-2">
-                  {item.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="font-mono text-[0.7rem] font-bold uppercase px-2.5 py-1 rounded bg-[color:var(--surface-warm)] text-[color:var(--ink)]"
-                    >
-                      {t}
-                    </span>
-                  ))}
+                {/* Tech stack */}
+                <div className="mt-5 pt-4 border-t border-[color:var(--ink)]/20 font-mono text-xs font-bold text-[color:var(--ink-muted)]">
+                  {item.tech.join(" · ")}
                 </div>
               </div>
             </motion.div>
